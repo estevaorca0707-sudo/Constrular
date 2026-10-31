@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constrular | Materiais de Construção</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="topbar">
+    <span>✦ Ofertas especiais para sua construção!</span>
+    <span>Qualidade e confiança em cada etapa.</span>
+</div>
+
+<header class="header">
+
+    <a href="#inicio" class="logo">
+        <span class="logo-icon">C+</span>
+        <span>CONSTRU<span>LAR</span><small>MATERIAIS DE CONSTRUÇÃO</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="navbar">
+        <a href="#inicio">Início</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+        <button id="accountButton">♙ Minha conta</button>
+        <button id="cartButton" class="cart-button">
+            🛒 Carrinho <span id="cartCount">0</span>
+        </button>
+    </div>
+
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <span class="tag">SUA OBRA COMEÇA AQUI</span>
+
+        <h1>
+            Construindo sonhos.<br>
+            <span>Realizando projetos.</span>
+        </h1>
+
+        <p>
+            Tudo o que você precisa para construir, reformar e transformar.
+            Encontre qualidade, variedade e os melhores materiais.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#produtos" class="btn-primary">Explorar produtos →</a>
+            <a href="#categorias" class="btn-outline">Ver categorias</a>
+        </div>
+
+        <div class="hero-info">
+            <div>✓ Produtos selecionados</div>
+            <div>✓ Atendimento especializado</div>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+        <div class="image-card">
+            <span>★ DESTAQUE</span>
+            <h3>Qualidade para sua obra</h3>
+            <p>Do alicerce ao acabamento.</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="advantages">
+
+    <div>
+        <span>🚚</span>
+        <div><strong>Entrega facilitada</strong><small>Consulte sua região</small></div>
+    </div>
+
+    <div>
+        <span>✓</span>
+        <div><strong>Qualidade garantida</strong><small>Materiais selecionados</small></div>
+    </div>
+
+    <div>
+        <span>♧</span>
+        <div><strong>Atendimento especial</strong><small>Estamos aqui para ajudar</small></div>
+    </div>
+
+    <div>
+        <span>▤</span>
+        <div><strong>Orçamento fácil</strong><small>Monte sua lista de compras</small></div>
+    </div>
+
+</section>
+
+<section class="section" id="categorias">
+
+    <div class="section-title">
+        <div>
+            <span class="tag">NAVEGUE PELA LOJA</span>
+            <h2>Nossas <span>categorias</span></h2>
+            <p>Encontre tudo para sua construção.</p>
+        </div>
+    </div>
+
+    <div class="category-grid">
+
+        <button class="category-card" data-category="Cimento">
+            <span>🧱</span>
+            <h3>Cimento e areia</h3>
+            <p>Materiais para sua fundação.</p>
+            <b>Explorar →</b>
+        </button>
+
+        <button class="category-card" data-category="Ferramentas">
+            <span>🔨</span>
+            <h3>Ferramentas</h3>
+            <p>Equipamentos para trabalhar.</p>
+            <b>Explorar →</b>
+        </button>
+
+        <button class="category-card" data-category="Tintas">
+            <span>🎨</span>
+            <h3>Tintas</h3>
+            <p>Cores para transformar.</p>
+            <b>Explorar →</b>
+        </button>
+
+        <button class="category-card" data-category="Elétrica">
+            <span>💡</span>
+            <h3>Elétrica</h3>
+            <p>Instalações e iluminação.</p>
+            <b>Explorar →</b>
+        </button>
+
+        <button class="category-card" data-category="Hidráulica">
+            <span>🚿</span>
+            <h3>Hidráulica</h3>
+            <p>Tubos, conexões e acessórios.</p>
+            <b>Explorar →</b>
+        </button>
+
+        <button class="category-card" data-category="Acabamento">
+            <span>🏠</span>
+            <h3>Acabamentos</h3>
+            <p>Os detalhes da sua construção.</p>
+            <b>Explorar →</b>
+        </button>
+
+    </div>
+
+</section>
+
+<section class="products-section section" id="produtos">
+
+    <div class="section-title">
+        <div>
+            <span class="tag">NOSSA SELEÇÃO</span>
+            <h2>Produtos em <span>destaque</span></h2>
+            <p>Confira alguns dos produtos da Constrular.</p>
+        </div>
+    </div>
+
+    <div class="product-controls">
+
+        <input type="search" id="searchInput" placeholder="🔎 Buscar produtos...">
+
+        <select id="categoryFilter">
+            <option value="Todos">Todas as categorias</option>
+            <option value="Cimento">Cimento</option>
+            <option value="Ferramentas">Ferramentas</option>
+            <option value="Tintas">Tintas</option>
+            <option value="Elétrica">Elétrica</option>
+            <option value="Hidráulica">Hidráulica</option>
+            <option value="Acabamento">Acabamento</option>
+        </select>
+
+        <select id="sortFilter">
+            <option value="featured">Destaques</option>
+            <option value="low">Menor preço</option>
+            <option value="high">Maior preço</option>
+            <option value="name">Nome A-Z</option>
+        </select>
+
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+    <p class="empty-state" id="emptyState" hidden>
+        Nenhum produto encontrado.
+    </p>
+
+    <div class="catalog-footer">
+        <span id="resultCount"></span>
+        <button id="clearFilters">Limpar filtros</button>
+    </div>
+
+</section>
+
+<section class="promo">
+
+    <div>
+        <span class="tag">CONSTRUA MAIS, GASTE MELHOR</span>
+        <h2>Sua próxima obra<br><span>começa com a gente.</span></h2>
+        <p>Descubra nossos produtos e encontre tudo o que precisa em um só lugar.</p>
+        <a href="#produtos" class="btn-primary">Ver produtos →</a>
+    </div>
+
+    <div class="promo-decoration">C+</div>
+
+</section>
+
+<section class="about section" id="sobre">
+
+    <div class="about-image"></div>
+
+    <div class="about-content">
+        <span class="tag">SOBRE A CONSTRULAR</span>
+
+        <h2>Mais que materiais.<br><span>Uma parceria para sua obra.</span></h2>
+
+        <p>
+            Na Constrular, acreditamos que cada projeto merece materiais de
+            qualidade. Nossa missão é ajudar você a construir, reformar e
+            transformar seus espaços.
+        </p>
+
+        <div class="about-points">
+            <p>✓ Variedade de produtos</p>
+            <p>✓ Qualidade e confiança</p>
+            <p>✓ Atendimento próximo</p>
+        </div>
+
+        <a href="#contato" class="btn-primary">Entre em contato →</a>
+    </div>
+
+</section>
+
+<section class="contact-section" id="contato">
+
+    <div>
+        <span class="tag">FALE CONOSCO</span>
+        <h2>Vamos construir algo incrível?</h2>
+        <p>Entre em contato e solicite seu orçamento.</p>
+    </div>
+
+    <a href="https://wa.me/5500000000000" target="_blank" class="btn-primary">
+        Conversar pelo WhatsApp ↗
+    </a>
+
+</section>
+
+</main>
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <a href="#inicio" class="logo footer-logo">
+                <span class="logo-icon">C+</span>
+                <span>CONSTRU<span>LAR</span><small>MATERIAIS DE CONSTRUÇÃO</small></span>
+            </a>
+
+            <p>Construindo confiança em cada etapa.</p>
+        </div>
+
+        <div>
+            <h3>Navegação</h3>
+            <a href="#inicio">Início</a>
+            <a href="#categorias">Categorias</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre nós</a>
+        </div>
+
+        <div>
+            <h3>Atendimento</h3>
+            <a href="#contato">Fale conosco</a>
+            <a href="#contato">Orçamentos</a>
+            <a href="#contato">Dúvidas</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Constrular. Todos os direitos reservados.
+    </div>
+
+</footer>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+
+    <div class="drawer-header">
+        <h2>Meu carrinho</h2>
+        <button id="closeCart">×</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="drawer-footer">
+        <div class="total">
+            <span>Total estimado</span>
+            <strong id="cartTotal">R$ 0,00</strong>
+        </div>
+
+        <button class="btn-primary" id="checkout">
+            Solicitar orçamento →
+        </button>
+
+        <small>Valores demonstrativos. Confirme a disponibilidade com a loja.</small>
+    </div>
+
+</aside>
+
+<div class="modal" id="accountModal">
+    <div class="modal-content">
+        <button id="closeModal" class="close-modal">×</button>
+        <span class="modal-icon">♙</span>
+        <h2>Bem-vindo à Constrular!</h2>
+        <p>Esta é uma demonstração da área do cliente.</p>
+        <button id="modalOk" class="btn-primary">Entendi</button>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+</body>
+</html>
